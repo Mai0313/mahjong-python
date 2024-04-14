@@ -1,7 +1,14 @@
-from src import mahjong
+from src.mahjong import Game, Hand, Round
+from rich.console import Console
 
-game = mahjong.Game()
+console = Console()
+
+
+game = Game()
 question = game.play()
-game.execute()
-print(question)
-# next_question = question.answer("feng2")
+round = Round(game)
+hand = Hand(round)
+console.print(hand.players)
+hand.shuffle()
+hand.deal()
+console.print(hand.players)
