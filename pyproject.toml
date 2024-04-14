@@ -160,6 +160,9 @@ ignore = [
     "E266",
     # Unused imports
     "F401",
+    "D418",
+    "UP031",
+    "RUF005",
     # # Print found
     # "T201",
     ]
